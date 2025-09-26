@@ -41,6 +41,21 @@ def fetch_package_resources(package_id: str) -> dict:
     results = data.get('result',{}).get('resources',[])
     return results
 
+def select_resources(packages_resources: list) -> list:
+    '''
+    _summary_
+
+    Args:
+        packages_resources (list): _description_
+
+    Returns:
+        list: _description_
+    '''
+    selected_resources_list = []
+    for resource in packages_resources:
+        if resource['format'] == 'CSV':
+            selected_resources_list.append(resource['url'])
+    return selected_resources_list 
 
 results = fetch_packages_ckan(CAPES_BASE_URL, 'catalogo de teses')
 num_results = len(results)
@@ -58,4 +73,11 @@ package_id_tests = results[0]['id']
 print(package_id_tests)
 
 package_details = fetch_package_resources(package_id_tests)
-print(package_details)
+for k in package_details[0].keys():
+    print(k)
+print()
+print(package_details[0]['format'])
+
+to_download = select_resources(package_details)
+print(to_download)
+print(len(to_download))
