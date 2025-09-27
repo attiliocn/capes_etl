@@ -70,12 +70,27 @@ session.mount("https://", HTTPAdapter(max_retries=retries))
 
 def download_resource(resource_metadata: dict, dest_folder: str) -> None:
     dest_path = os.path.join(dest_folder, resource_metadata['name']) + '.csv'
-    with session.get(resource_metadata['url'], stream=True, timeout=30) as response:
-        response.raise_for_status()
-        with open(dest_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=None):
-                if chunk:
-                    f.write(chunk)
+    # check if the file already exist prior to downloading it
+    if os.path.isfile(dest_path):
+        print('File already exist. Skipping')
+        return
+    max_retries = 5
+    for r in range(max_retries):
+        try:
+            with session.get(resource_metadata['url'], stream=True, timeout=30) as response:
+                response.raise_for_status()
+                with open(dest_path, "wb") as f:
+                    for chunk in response.iter_content(chunk_size=None):
+                        if chunk:
+                            f.write(chunk)
+        except:
+            if r < max_retries - 1:
+                print(f'Attempt {r+1} failed')
+            else:
+                print('Failed to download file')
+        else:
+            print('Success')
+            break
 
 # query CAPES CKAN for entries
 results = fetch_packages_ckan(CAPES_BASE_URL, 'catalogo de teses')
