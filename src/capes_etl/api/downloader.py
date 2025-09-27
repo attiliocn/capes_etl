@@ -79,26 +79,30 @@ def download_resource(resource_metadata: dict, dest_folder: str) -> None:
 
 # query CAPES CKAN for entries
 results = fetch_packages_ckan(CAPES_BASE_URL, 'catalogo de teses')
-num_results = len(results)
-print(f'Found {num_results} entries')
-
-for i, result in enumerate(results):
-    print(f'Result {i}: {result['name']}\nID: {result['id']}\n')
-
-print(type(results))
-
-for k in results[0].keys():
-    print(k)
-
-package_id_tests = results[0]['id']
-print(package_id_tests)
-
-package_details = fetch_package_resources(package_id_tests)
-for k in package_details[0].keys():
-    print(k)
+print(f'Found {len(results)} entries')
+print(f'Result 0 is {type(results[0])}')
+print(f'Result 0 has the keys: {results[0].keys()}')
 print()
-print(package_details[0]['format'])
+for i, result in enumerate(results):
+    print(f'Result {i}\n{result['name']}\nID: {result['id']}\n')
 
-to_download = select_resources(package_details)
-print(to_download)
-print(len(to_download))
+# Fetch the details of some package
+package_id_tests = results[0]['id']
+package_resources = fetch_package_resources(package_id_tests)
+print(f'Package resources is {type(package_resources)}')
+print(f'Package has {len(package_resources)} resources')
+print(f'Resource 0 has the keys: {package_resources[0].keys()}')
+
+# Select only csv files from the package's resources
+print(f'Will select only csv files from resources')
+selected_resources = select_resources(package_resources)
+print(f'Selected {len(selected_resources)} resources')
+for i, resource in enumerate(selected_resources):
+    print(f'Resource {i}')
+    print(f'Filename: {resource['name']}')
+    print(f'Size: {resource['size']}')
+    print(f'URL: {resource['url']}')
+    print(f'')
+
+for resource in selected_resources:
+    download_resource(resource, '/home/attilio/repositories/capes_etl/data/raw')
