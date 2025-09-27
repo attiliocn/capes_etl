@@ -102,23 +102,35 @@ print()
 for i, result in enumerate(results):
     print(f'Result {i}\n{result['name']}\nID: {result['id']}\n')
 
-# Fetch the details of some package
-package_id_tests = results[0]['id']
-package_resources = fetch_package_resources(package_id_tests)
-print(f'Package resources is {type(package_resources)}')
-print(f'Package has {len(package_resources)} resources')
-print(f'Resource 0 has the keys: {package_resources[0].keys()}')
+# Fetch packages details
 
-# Select only csv files from the package's resources
-print(f'Will select only csv files from resources')
-selected_resources = select_resources(package_resources)
-print(f'Selected {len(selected_resources)} resources')
-for i, resource in enumerate(selected_resources):
-    print(f'Resource {i}')
-    print(f'Filename: {resource['name']}')
-    print(f'Size: {resource['size']}')
-    print(f'URL: {resource['url']}')
-    print(f'')
+all_packages_resources = []
+for result in results:
+    package_id = result['id']
+    package_resources = fetch_package_resources(package_id)
+    selected_resources = select_resources(package_resources)
+    all_packages_resources.extend(selected_resources)
 
-for resource in selected_resources:
+print(f'Will download {len(all_packages_resources)} resources')
+for resource in all_packages_resources:
+    print(resource['name'])
+
+# package_id_tests = results[1]['id']
+# package_resources = fetch_package_resources(package_id_tests)
+# print(f'Package resources is {type(package_resources)}')
+# print(f'Package has {len(package_resources)} resources')
+# print(f'Resource 0 has the keys: {package_resources[0].keys()}')
+
+# # Select only csv files from the package's resources
+# print(f'Will select only csv files from resources')
+# selected_resources = select_resources(package_resources)
+# print(f'Selected {len(selected_resources)} resources')
+# for i, resource in enumerate(selected_resources):
+#     print(f'Resource {i}')
+#     print(f'Filename: {resource['name']}')
+#     print(f'Size: {resource['size']}')
+#     print(f'URL: {resource['url']}')
+#     print(f'')
+
+for resource in all_packages_resources:
     download_resource(resource, '/home/attilio/repositories/capes_etl/data/raw')
