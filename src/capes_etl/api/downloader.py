@@ -22,7 +22,7 @@ def fetch_packages_ckan(url: str, query: str) -> list:
     results = data.get('result',{}).get('results',[])
     return results
 
-def fetch_package_resources(package_id: str) -> dict:
+def fetch_package_resources(package_id: str) -> list:
     '''
     _summary_
 
@@ -30,7 +30,7 @@ def fetch_package_resources(package_id: str) -> dict:
         package_id (str): _description_
 
     Returns:
-        dict: _description_
+        list: _description_
     '''         
     response = requests.get(
         f'{CAPES_BASE_URL}/package_show',
