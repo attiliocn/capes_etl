@@ -1,6 +1,7 @@
+import os
+
 import requests
 from requests.adapters import HTTPAdapter, Retry
-import os
 
 CAPES_BASE_URL = 'https://dadosabertos.capes.gov.br/api/3/action'
 
