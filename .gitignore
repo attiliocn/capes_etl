@@ -1,3 +1,6 @@
+# ignore the data directory (raw and processed)
+data/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
