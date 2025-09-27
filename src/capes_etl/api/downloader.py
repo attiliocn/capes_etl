@@ -1,4 +1,5 @@
 import requests
+import os
 
 CAPES_BASE_URL = 'https://dadosabertos.capes.gov.br/api/3/action'
 
@@ -57,6 +58,16 @@ def select_resources(packages_resources: list) -> list:
             selected_resources_list.append(resource)
     return selected_resources_list 
 
+def download_resource(resource_metadata: dict, dest_folder: str) -> None:
+    dest_path = os.path.join(dest_folder, resource_metadata['name']) + '.csv'
+    response = requests.get(resource_metadata['url'], stream=True, timeout=30)
+    response.raise_for_status()
+    with open(dest_path, "wb") as f:
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:
+                f.write(chunk)
+
+# query CAPES CKAN for entries
 results = fetch_packages_ckan(CAPES_BASE_URL, 'catalogo de teses')
 num_results = len(results)
 print(f'Found {num_results} entries')
