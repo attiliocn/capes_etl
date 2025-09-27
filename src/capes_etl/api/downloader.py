@@ -73,7 +73,7 @@ def download_resource(resource_metadata: dict, dest_folder: str) -> None:
     with session.get(resource_metadata['url'], stream=True, timeout=30) as response:
         response.raise_for_status()
         with open(dest_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
+            for chunk in response.iter_content(chunk_size=None):
                 if chunk:
                     f.write(chunk)
 
