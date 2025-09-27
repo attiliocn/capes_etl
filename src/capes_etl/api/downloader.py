@@ -54,7 +54,7 @@ def select_resources(packages_resources: list) -> list:
     selected_resources_list = []
     for resource in packages_resources:
         if resource['format'] == 'CSV':
-            selected_resources_list.append(resource['url'])
+            selected_resources_list.append(resource)
     return selected_resources_list 
 
 results = fetch_packages_ckan(CAPES_BASE_URL, 'catalogo de teses')
