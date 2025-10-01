@@ -1,6 +1,9 @@
 # ignore the data directory (raw and processed)
 data/*
 
+# ignore selected configuration files
+config/default_mapping.yaml
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
