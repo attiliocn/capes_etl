@@ -2,7 +2,7 @@
 
 import csv
 import os
-from collections import Counter
+import yaml
 
 RAW_DATA_DIR = 'data/raw'
 
@@ -16,15 +16,20 @@ def discover_columns():
                     csv_header = f.readline().strip()
                     csv_header = csv_header.decode('utf-8')
                     dialect = csv.Sniffer().sniff(csv_header, delimiters=[",",";","\t","|"])
-                    # print("Detected delimiter:", dialect.delimiter)
                     csv_header_split = csv_header.split(dialect.delimiter)
                     detected_columns.extend(csv_header_split)
     return detected_columns 
 
 def main():
     columns = discover_columns()
-    for col, count in Counter(columns).items():
-        print(f'{col}: {count}')
+    unique_columns = list(set(columns))
+    default_mapping = {col:col for col in unique_columns}
+    print(default_mapping)
+
+    print(os.getcwd())
+
+    with open('config/default_mapping.yaml', mode='w') as f:
+        yaml.dump(default_mapping, f)
 
 if __name__ == '__main__':
     main()
