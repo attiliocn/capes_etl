@@ -1,53 +1,100 @@
-AN_BASE: AN_BASE
-AnoBase: AnoBase
-AreaAvaliacao: AreaAvaliacao
-AreaConhecimento: AreaConhecimento
-AreaConhecimentoCodigo: AreaConhecimentoCodigo
-Autor: Autor
-BibliotecaDepositaria: BibliotecaDepositaria
-CD_AREA_CONHECIMENTO: CD_AREA_CONHECIMENTO
-CD_ENTIDADE_CAPES: CD_ENTIDADE_CAPES
-CD_ESPECIALIDADE: CD_ESPECIALIDADE
-CD_GRANDE_AREA_CONHECIMENTO: CD_GRANDE_AREA_CONHECIMENTO
-CD_PROGRAMA: CD_PROGRAMA
-CD_SUBAREA_CONHECIMENTO: CD_SUBAREA_CONHECIMENTO
+ano_base:
+  - AN_BASE
+  - AnoBase
+
+area_avaliacao:
+  - AreaAvaliacao
+  - NM_AREA_AVALIACAO
+
+AreaConhecimento:
+  - AreaConhecimento
+
+autor: 
+  - Autor
+  - NM_DISCENTE
+
+BibliotecaDepositaria:
+  - BibliotecaDepositaria
+  - DS_BIBLIOTECA_DEPOSITARIA
+
+codigo_programa:
+  - CodigoPrograma
+  - CD_PROGRAMA
+codigo_entidade_capes: 
+  - CD_ENTIDADE_CAPES
+codigo_grande_area: 
+  - GrandeAreaCodigo
+  - CD_GRANDE_AREA_CONHECIMENTO
+codigo_area: 
+  - AreaConhecimentoCodigo
+  - CD_AREA_CONHECIMENTO
+codigo_subarea: 
+  - CD_SUBAREA_CONHECIMENTO
+codigo_especialidade: 
+  - CD_ESPECIALIDADE
+
+Orientador_1: 
+  - Orientador_1
+  - NM_ORIENTADOR
+Orientador_2: Orientador_2
+Orientador_3: Orientador_3
+Orientador_4: Orientador_4
+DocumentoOrientador_1: 
+  - DocumentoOrientador_1
+  - ID_PESSOA_ORIENTADOR
+DocumentoOrientador_2: DocumentoOrientador_2
+DocumentoOrientador_3: DocumentoOrientador_3
+DocumentoOrientador_4: DocumentoOrientador_4
+
 CoOrientador_1: CoOrientador_1
 CoOrientador_2: CoOrientador_2
 CoOrientador_3: CoOrientador_3
 CoOrientador_4: CoOrientador_4
-CodigoPrograma: CodigoPrograma
-DH_FIM_AREA_CONC: DH_FIM_AREA_CONC
-DH_FIM_LINHA: DH_FIM_LINHA
-DH_INICIO_AREA_CONC: DH_INICIO_AREA_CONC
-DH_INICIO_LINHA: DH_INICIO_LINHA
-DS_ABSTRACT: DS_ABSTRACT
-DS_BIBLIOTECA_DEPOSITARIA: DS_BIBLIOTECA_DEPOSITARIA
-DS_CATEGORIA_ORIENTADOR: DS_CATEGORIA_ORIENTADOR
-DS_KEYWORD: DS_KEYWORD
-DS_PALAVRA_CHAVE: DS_PALAVRA_CHAVE
-DS_RESUMO: DS_RESUMO
-DS_URL_TEXTO_COMPLETO: DS_URL_TEXTO_COMPLETO
-DT_MATRICULA: DT_MATRICULA
-DT_TITULACAO: DT_TITULACAO
-DataDefesa: DataDefesa
 DocumentoCoOrientador_1: DocumentoCoOrientador_1
 DocumentoCoOrientador_2: DocumentoCoOrientador_2
 DocumentoCoOrientador_3: DocumentoCoOrientador_3
 DocumentoCoOrientador_4: DocumentoCoOrientador_4
-DocumentoDiscente: DocumentoDiscente
-DocumentoOrientador_1: DocumentoOrientador_1
-DocumentoOrientador_2: DocumentoOrientador_2
-DocumentoOrientador_3: DocumentoOrientador_3
-DocumentoOrientador_4: DocumentoOrientador_4
-GrandeAreaCodigo: GrandeAreaCodigo
+
+
+DT_MATRICULA: DT_MATRICULA
+DT_TITULACAO: DT_TITULACAO
+
+DataDefesa: DataDefesa
+
+DH_INICIO_AREA_CONC: DH_INICIO_AREA_CONC
+DH_FIM_AREA_CONC: DH_FIM_AREA_CONC
+
+DH_INICIO_LINHA: DH_INICIO_LINHA
+DH_FIM_LINHA: DH_FIM_LINHA
+
+DS_ABSTRACT: DS_ABSTRACT
+
+DS_CATEGORIA_ORIENTADOR: DS_CATEGORIA_ORIENTADOR
+DS_KEYWORD: DS_KEYWORD
+DS_PALAVRA_CHAVE: DS_PALAVRA_CHAVE
+
+resumo:
+  - DS_RESUMO
+  - ResumoTese
+
+url_texto_completo:
+  - DS_URL_TEXTO_COMPLETO
+  - URLTextoCompleto
+
+
+
+DocumentoDiscente: 
+  - DocumentoDiscente
+  - ID_PESSOA_DISCENTE
+
 GrandeAreaDescricao: GrandeAreaDescricao
 ID_ADD_PRODUCAO_INTELECTUAL: ID_ADD_PRODUCAO_INTELECTUAL
 ID_ADD_PRODUCAO_VINCULO_CT: ID_ADD_PRODUCAO_VINCULO_CT
 ID_AREA_CONCENTRACAO: ID_AREA_CONCENTRACAO
 ID_GRAU_ACADEMICO: ID_GRAU_ACADEMICO
 ID_LINHA_PESQUISA: ID_LINHA_PESQUISA
-ID_PESSOA_DISCENTE: ID_PESSOA_DISCENTE
-ID_PESSOA_ORIENTADOR: ID_PESSOA_ORIENTADOR
+
+
 ID_PRODUCAO_INTELECTUAL: ID_PRODUCAO_INTELECTUAL
 ID_PROJETO: ID_PROJETO
 ID_SUBTIPO_PRODUCAO: ID_SUBTIPO_PRODUCAO
@@ -57,11 +104,11 @@ IN_TCC_COM_VINCULO_PRODUCAO: IN_TCC_COM_VINCULO_PRODUCAO
 IN_TRABALHO_MESMA_AREA: IN_TRABALHO_MESMA_AREA
 Idioma: Idioma
 LinhaPesquisa: LinhaPesquisa
-NM_AREA_AVALIACAO: NM_AREA_AVALIACAO
+
 NM_AREA_CONCENTRACAO: NM_AREA_CONCENTRACAO
 NM_AREA_CONHECIMENTO: NM_AREA_CONHECIMENTO
 NM_CATEGORIA_DOCENTE: NM_CATEGORIA_DOCENTE
-NM_DISCENTE: NM_DISCENTE
+
 NM_ENTIDADE_ENSINO: NM_ENTIDADE_ENSINO
 NM_ESPECIALIDADE: NM_ESPECIALIDADE
 NM_EXPECTATIVA_ATUACAO: NM_EXPECTATIVA_ATUACAO
@@ -69,7 +116,6 @@ NM_GRANDE_AREA_CONHECIMENTO: NM_GRANDE_AREA_CONHECIMENTO
 NM_GRAU_ACADEMICO: NM_GRAU_ACADEMICO
 NM_IDIOMA: NM_IDIOMA
 NM_LINHA_PESQUISA: NM_LINHA_PESQUISA
-NM_ORIENTADOR: NM_ORIENTADOR
 NM_PRODUCAO: NM_PRODUCAO
 NM_PROGRAMA: NM_PROGRAMA
 NM_PROJETO: NM_PROJETO
@@ -84,17 +130,11 @@ Nivel: Nivel
 NomeIes: NomeIes
 NomePrograma: NomePrograma
 NumeroPaginas: NumeroPaginas
-Orientador_1: Orientador_1
-Orientador_2: Orientador_2
-Orientador_3: Orientador_3
-Orientador_4: Orientador_4
 PalavrasChave: PalavrasChave
 Regiao: Regiao
-ResumoTese: ResumoTese
 SG_ENTIDADE_ENSINO: SG_ENTIDADE_ENSINO
 SG_UF_IES: SG_UF_IES
 SiglaIes: SiglaIes
 TituloTese: TituloTese
-URLTextoCompleto: URLTextoCompleto
 Uf: Uf
 Volume: Volume
