@@ -1,140 +1,193 @@
+# colunas organizadas
+
 ano_base:
   - AN_BASE
   - AnoBase
 
-area_avaliacao:
-  - AreaAvaliacao
-  - NM_AREA_AVALIACAO
-
-AreaConhecimento:
-  - AreaConhecimento
-
-autor: 
+discente: 
   - Autor
   - NM_DISCENTE
 
-BibliotecaDepositaria:
-  - BibliotecaDepositaria
-  - DS_BIBLIOTECA_DEPOSITARIA
+documento_discente: 
+  - DocumentoDiscente
+  - ID_PESSOA_DISCENTE
 
-codigo_programa:
-  - CodigoPrograma
-  - CD_PROGRAMA
-codigo_entidade_capes: 
-  - CD_ENTIDADE_CAPES
-codigo_grande_area: 
-  - GrandeAreaCodigo
-  - CD_GRANDE_AREA_CONHECIMENTO
-codigo_area: 
-  - AreaConhecimentoCodigo
-  - CD_AREA_CONHECIMENTO
-codigo_subarea: 
-  - CD_SUBAREA_CONHECIMENTO
-codigo_especialidade: 
-  - CD_ESPECIALIDADE
+ies_sigla:
+  - SiglaIes
+  - SG_ENTIDADE_ENSINO
 
-Orientador_1: 
-  - Orientador_1
-  - NM_ORIENTADOR
-Orientador_2: Orientador_2
-Orientador_3: Orientador_3
-Orientador_4: Orientador_4
-DocumentoOrientador_1: 
-  - DocumentoOrientador_1
-  - ID_PESSOA_ORIENTADOR
-DocumentoOrientador_2: DocumentoOrientador_2
-DocumentoOrientador_3: DocumentoOrientador_3
-DocumentoOrientador_4: DocumentoOrientador_4
+ies_nome:
+  - NomeIes
 
-CoOrientador_1: CoOrientador_1
-CoOrientador_2: CoOrientador_2
-CoOrientador_3: CoOrientador_3
-CoOrientador_4: CoOrientador_4
-DocumentoCoOrientador_1: DocumentoCoOrientador_1
-DocumentoCoOrientador_2: DocumentoCoOrientador_2
-DocumentoCoOrientador_3: DocumentoCoOrientador_3
-DocumentoCoOrientador_4: DocumentoCoOrientador_4
+data_matricula:
+  - DT_MATRICULA
 
+data_titulacao:
+  - DataDefesa
+  - DT_TITULACAO
 
-DT_MATRICULA: DT_MATRICULA
-DT_TITULACAO: DT_TITULACAO
+tese_grau_academico:
+  - NM_GRAU_ACADEMICO
+  - Nivel
 
-DataDefesa: DataDefesa
+tese_titulo:
+  - TituloTese
+  - NM_PROJETO
 
-DH_INICIO_AREA_CONC: DH_INICIO_AREA_CONC
-DH_FIM_AREA_CONC: DH_FIM_AREA_CONC
+tese_palavras_chave:
+  - DS_PALAVRA_CHAVE
+  - PalavrasChave
 
-DH_INICIO_LINHA: DH_INICIO_LINHA
-DH_FIM_LINHA: DH_FIM_LINHA
+tese_keywords:
+  - DS_KEYWORD
 
-DS_ABSTRACT: DS_ABSTRACT
+abstract_tese:
+  - DS_ABSTRACT
 
-DS_CATEGORIA_ORIENTADOR: DS_CATEGORIA_ORIENTADOR
-DS_KEYWORD: DS_KEYWORD
-DS_PALAVRA_CHAVE: DS_PALAVRA_CHAVE
-
-resumo:
+resumo_tese:
   - DS_RESUMO
   - ResumoTese
+
+tese_idioma:
+  - Idioma
+  - NM_IDIOMA
+
+tese_volume:
+  - Volume
+  - NR_VOLUME
+
+tese_num_paginas:
+  - NR_PAGINAS
+  - NumeroPaginas
+
+biblioteca_depositaria:
+  - BibliotecaDepositaria
+  - DS_BIBLIOTECA_DEPOSITARIA
 
 url_texto_completo:
   - DS_URL_TEXTO_COMPLETO
   - URLTextoCompleto
 
+orientador_1: 
+  - Orientador_1
+  - NM_ORIENTADOR
+orientador_2: 
+  - Orientador_2
+orientador_3: 
+  - Orientador_3
+orientador_4: 
+  - Orientador_4
+categoria_orientador_1:
+  - DS_CATEGORIA_ORIENTADOR
+categoria_docente_orientador_1:
+  - NM_CATEGORIA_DOCENTE
+documento_orientador_1: 
+  - DocumentoOrientador_1
+  - ID_PESSOA_ORIENTADOR
+documento_orientador_2: 
+  - DocumentoOrientador_2
+documento_orientador_3: 
+  - DocumentoOrientador_3
+documento_orientador_4: 
+  - DocumentoOrientador_4
+co_orientador_1: 
+  - CoOrientador_1
+co_orientador_2: 
+  - CoOrientador_2
+co_orientador_3:
+  - CoOrientador_3
+co_orientador_4:
+  - CoOrientador_4
+documento_co_orientador_1: 
+  - DocumentoCoOrientador_1
+documento_co_orientador_2:
+  - DocumentoCoOrientador_2
+documento_co_orientador_3:
+  - DocumentoCoOrientador_3
+documento_co_orientador_4:
+  - DocumentoCoOrientador_4
 
+linha_pesquisa:
+  - NM_LINHA_PESQUISA
+  - LinhaPesquisa
+codigo_programa:
+  - CodigoPrograma
+  - CD_PROGRAMA
+area_avaliacao:
+  - AreaAvaliacao
+  - NM_AREA_AVALIACAO
+subarea:
+  - NM_SUBAREA_CONHECIMENTO
+codigo_subarea: 
+  - CD_SUBAREA_CONHECIMENTO
+codigo_especialidade: 
+  - CD_ESPECIALIDADE
+area_concentracao:
+  - NM_AREA_CONCENTRACAO
+codigo_entidade_capes: 
+  - CD_ENTIDADE_CAPES
+grande_area:
+  - NM_GRANDE_AREA_CONHECIMENTO
+  - GrandeAreaDescricao
+codigo_grande_area: 
+  - CD_GRANDE_AREA_CONHECIMENTO
+  - GrandeAreaCodigo
+area_conhecimento:
+  - AreaConhecimento
+  - NM_AREA_CONHECIMENTO  
+codigo_area: 
+  - AreaConhecimentoCodigo
+  - CD_AREA_CONHECIMENTO
 
-DocumentoDiscente: 
-  - DocumentoDiscente
-  - ID_PESSOA_DISCENTE
+data_inicio_area_contratacao:
+  - DH_INICIO_AREA_CONC
+data_fim_area_concentracao:
+  - DH_FIM_AREA_CONC
+data_inicio_linha_pesquisa:
+  - DH_INICIO_LINHA
+data_fim_linha_pesquisa:
+  - DH_FIM_LINHA
 
-GrandeAreaDescricao: GrandeAreaDescricao
+nome_programa:
+  - NM_PROGRAMA
+  - NomePrograma
+
+regiao_brasil:
+  - NM_REGIAO
+  - Regiao
+uf_sigla:
+  - SG_UF_IES
+  - Uf
+uf_nome:
+  - NM_UF_IES
+
+# colunas pendentes
+
 ID_ADD_PRODUCAO_INTELECTUAL: ID_ADD_PRODUCAO_INTELECTUAL
 ID_ADD_PRODUCAO_VINCULO_CT: ID_ADD_PRODUCAO_VINCULO_CT
 ID_AREA_CONCENTRACAO: ID_AREA_CONCENTRACAO
 ID_GRAU_ACADEMICO: ID_GRAU_ACADEMICO
 ID_LINHA_PESQUISA: ID_LINHA_PESQUISA
-
-
 ID_PRODUCAO_INTELECTUAL: ID_PRODUCAO_INTELECTUAL
 ID_PROJETO: ID_PROJETO
 ID_SUBTIPO_PRODUCAO: ID_SUBTIPO_PRODUCAO
 ID_TP_EXPECTATIVA_ATUACAO: ID_TP_EXPECTATIVA_ATUACAO
+
 IN_ORIENT_PARTICIPOU_BANCA: IN_ORIENT_PARTICIPOU_BANCA
 IN_TCC_COM_VINCULO_PRODUCAO: IN_TCC_COM_VINCULO_PRODUCAO
 IN_TRABALHO_MESMA_AREA: IN_TRABALHO_MESMA_AREA
-Idioma: Idioma
-LinhaPesquisa: LinhaPesquisa
-
-NM_AREA_CONCENTRACAO: NM_AREA_CONCENTRACAO
-NM_AREA_CONHECIMENTO: NM_AREA_CONHECIMENTO
-NM_CATEGORIA_DOCENTE: NM_CATEGORIA_DOCENTE
 
 NM_ENTIDADE_ENSINO: NM_ENTIDADE_ENSINO
 NM_ESPECIALIDADE: NM_ESPECIALIDADE
 NM_EXPECTATIVA_ATUACAO: NM_EXPECTATIVA_ATUACAO
-NM_GRANDE_AREA_CONHECIMENTO: NM_GRANDE_AREA_CONHECIMENTO
-NM_GRAU_ACADEMICO: NM_GRAU_ACADEMICO
-NM_IDIOMA: NM_IDIOMA
-NM_LINHA_PESQUISA: NM_LINHA_PESQUISA
+
 NM_PRODUCAO: NM_PRODUCAO
-NM_PROGRAMA: NM_PROGRAMA
-NM_PROJETO: NM_PROJETO
-NM_REGIAO: NM_REGIAO
-NM_SUBAREA_CONHECIMENTO: NM_SUBAREA_CONHECIMENTO
 NM_SUBTIPO_PRODUCAO: NM_SUBTIPO_PRODUCAO
 NM_TP_VINCULO: NM_TP_VINCULO
-NM_UF_IES: NM_UF_IES
-NR_PAGINAS: NR_PAGINAS
-NR_VOLUME: NR_VOLUME
-Nivel: Nivel
-NomeIes: NomeIes
-NomePrograma: NomePrograma
-NumeroPaginas: NumeroPaginas
-PalavrasChave: PalavrasChave
-Regiao: Regiao
-SG_ENTIDADE_ENSINO: SG_ENTIDADE_ENSINO
-SG_UF_IES: SG_UF_IES
-SiglaIes: SiglaIes
-TituloTese: TituloTese
-Uf: Uf
-Volume: Volume
+
+
+
+
+
+
+
