@@ -58,6 +58,8 @@ def select_resources(packages_resources: list) -> list:
     for resource in packages_resources:
         if resource['format'] == 'CSV':
             selected_resources_list.append(resource)
+        elif resource['format'] == 'PDF':
+            selected_resources_list.append(resource)
     return selected_resources_list 
 
 session = requests.Session()
@@ -70,7 +72,7 @@ session.mount("http://", HTTPAdapter(max_retries=retries))
 session.mount("https://", HTTPAdapter(max_retries=retries))
 
 def download_resource(resource_metadata: dict, dest_folder: str) -> None:
-    dest_path = os.path.join(dest_folder, resource_metadata['name']) + '.csv'
+    dest_path = os.path.join(dest_folder, resource_metadata['name']) + f'.{resource_metadata['format'].lower()}'
     # check if the file already exist prior to downloading it
     if os.path.isfile(dest_path):
         print('File already exist. Skipping')
