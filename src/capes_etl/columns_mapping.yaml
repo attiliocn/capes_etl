@@ -1,10 +1,40 @@
-# colunas organizadas
-
 ano_base:
+# Ano Base de Coleta dos Dados 
   - AN_BASE
   - AnoBase
 
+codigo_programa:
+# Código de Identificação do Programa 
+  - CodigoPrograma
+  - CD_PROGRAMA
+
+nome_programa:
+# Nome do Programa 
+  - NM_PROGRAMA
+  - NomePrograma
+
+ies_sigla:
+# Sigla da Instituição de Educação Superior
+  - SiglaIes
+  - SG_ENTIDADE_ENSINO
+
+ies_nome:
+# Nome da Instituição de Educação Superior 
+  - NomeIes
+  - NM_ENTIDADE_ENSINO
+
+data_titulacao:
+# Data da Defesa da Tese ou Dissertação 
+  - DataDefesa
+  - DT_TITULACAO
+
+biblioteca_depositaria:
+# Descrição da Biblioteca Depositária 
+  - BibliotecaDepositaria
+  - DS_BIBLIOTECA_DEPOSITARIA
+
 discente: 
+# Nome do Autor da Tese ou Dissertação 
   - Autor
   - NM_DISCENTE
 
@@ -12,20 +42,10 @@ documento_discente:
   - DocumentoDiscente
   - ID_PESSOA_DISCENTE
 
-ies_sigla:
-  - SiglaIes
-  - SG_ENTIDADE_ENSINO
-
-ies_nome:
-  - NomeIes
-  - NM_ENTIDADE_ENSINO
 
 data_matricula:
   - DT_MATRICULA
 
-data_titulacao:
-  - DataDefesa
-  - DT_TITULACAO
 
 tese_grau_academico:
   - NM_GRAU_ACADEMICO
@@ -36,6 +56,12 @@ grau_academico_id:
 
 tese_titulo:
   - TituloTese
+  - NM_PRODUCAO
+
+tese_tipo:
+  - NM_SUBTIPO_PRODUCAO
+
+tese_projeto:
   - NM_PROJETO
 
 tese_palavras_chave:
@@ -64,9 +90,7 @@ tese_num_paginas:
   - NR_PAGINAS
   - NumeroPaginas
 
-biblioteca_depositaria:
-  - BibliotecaDepositaria
-  - DS_BIBLIOTECA_DEPOSITARIA
+
 
 url_texto_completo:
   - DS_URL_TEXTO_COMPLETO
@@ -114,9 +138,7 @@ documento_co_orientador_4:
 linha_pesquisa:
   - NM_LINHA_PESQUISA
   - LinhaPesquisa
-codigo_programa:
-  - CodigoPrograma
-  - CD_PROGRAMA
+
 area_avaliacao:
   - AreaAvaliacao
   - NM_AREA_AVALIACAO
@@ -154,9 +176,7 @@ data_inicio_linha_pesquisa:
 data_fim_linha_pesquisa:
   - DH_FIM_LINHA
 
-nome_programa:
-  - NM_PROGRAMA
-  - NomePrograma
+
 
 regiao_brasil:
   - NM_REGIAO
@@ -172,6 +192,9 @@ expectativa_atuacao:
 
 expectativa_atuacao_id:
   - ID_TP_EXPECTATIVA_ATUACAO
+
+tp_vinculo:
+  - NM_TP_VINCULO
 
 # colunas pendentes
 
@@ -194,9 +217,9 @@ IN_TRABALHO_MESMA_AREA: IN_TRABALHO_MESMA_AREA
 
 
 
-NM_PRODUCAO: NM_PRODUCAO
-NM_SUBTIPO_PRODUCAO: NM_SUBTIPO_PRODUCAO
-NM_TP_VINCULO: NM_TP_VINCULO
+
+
+
 
 
 
